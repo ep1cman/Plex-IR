@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Version="1700" Guid="{2C4E1722-DB76-419F-AF52-A0FA9BDC3948}" Time="1446933179.95">
+    <Autostart Name="Autostart" Expanded="True">
+        <Plugin Identifier="Keyboard" Guid="{59CBD10F-C1D8-4ADB-999B-9B76BA360F1F}" File="Keyboard">
+            gAKIhXEALg==
+        </Plugin>
+        <Action>
+            System.Execute(u'C:\\Program Files (x86)\\Plex Home Theater\\Plex Home Theater.exe', u'', 0, False, 2, u'', False, False, u'', False, False, False)
+        </Action>
+    </Autostart>
+    <Macro Name="Start Program: Plex Home Theater.exe" Expanded="True">
+        <Event Name="Keyboard.Shift+Ctrl+Alt+P" />
+        <Action>
+            EventGhost.ShowOSD(u'Starting PLEX...', u'0;-24;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 5, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.Execute(u'taskkill.exe', u'/f /im Steam.exe', 0, False, 2, u'', False, False, u'', False, False, False)
+        </Action>
+        <Action>
+            System.Execute(u'C:\\Program Files (x86)\\Plex Home Theater\\Plex Home Theater.exe', u'', 0, False, 2, u'', False, False, u'', False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Start Program: Steam.exe" Expanded="True">
+        <Event Name="Keyboard.Shift+Ctrl+Alt+S" />
+        <Action>
+            EventGhost.ShowOSD(u'Starting Steam...', u'0;-24;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 5, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.Execute(u'taskkill.exe', u'/f /im "Plex Home Theater.exe"', 0, False, 2, u'', False, False, u'', False, False, False)
+        </Action>
+        <Action>
+            System.Execute(u'C:\\Program Files (x86)\\Steam\\Steam.exe', u'', 0, False, 2, u'', False, False, u'', False, False, False)
+        </Action>
+    </Macro>
+</EventGhost>
