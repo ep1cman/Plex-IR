@@ -1,6 +1,8 @@
 Plex Home Theatre IR remote
 ---------------------------
 
+![photo of circuit](photo.jpg)
+
   Having found that MCE remotes cost ~£15 and an Arduino micro +
   IR receiver + Remote can be obtained for much less (or free
   in my case as I had all the parts laying around). I decided to
